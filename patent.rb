@@ -10,7 +10,7 @@ class Patent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://get.patent.dev/patent_1.12.1_darwin_amd64.tar.gz"
-      sha256 "fa6b13b2ec63075a934f804f5be96add106e03e732bd8294cf0ed079765a0567"
+      sha256 "e49bda63e0f99709e37da784e0cc2eab0c64b2d4aa844f19cda503d23976505c"
 
       define_method(:install) do
         bin.install "patent"
@@ -18,7 +18,7 @@ class Patent < Formula
     end
     if Hardware::CPU.arm?
       url "https://get.patent.dev/patent_1.12.1_darwin_arm64.tar.gz"
-      sha256 "0cd01f1d3153bed1f97b1b116292ea155db54143af06f125f2d878dff6c7a43c"
+      sha256 "c62fa279aaf264061105f150b0a28bff98fcca0ed8a4e30895071a58ad4f0636"
 
       define_method(:install) do
         bin.install "patent"
@@ -29,14 +29,14 @@ class Patent < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://get.patent.dev/patent_1.12.1_linux_amd64.tar.gz"
-      sha256 "aed37890fd37dcb4ae9ecb8471251a874e2c036109c5185bdc90badf8759e0dd"
+      sha256 "481e1fd36f4a6f87cd86216cd397eaf6cc7770f5e79c28bcb0e84f83df2b4dfc"
       define_method(:install) do
         bin.install "patent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://get.patent.dev/patent_1.12.1_linux_arm64.tar.gz"
-      sha256 "0b8cd8f11582cec64278d218da51ec3afe3dcc7ac4f723b0135785be0884eaca"
+      sha256 "3ce80e805505f5b4c11343ebe804e4834b174b42c438cb273d655aaa9af83f78"
       define_method(:install) do
         bin.install "patent"
       end
