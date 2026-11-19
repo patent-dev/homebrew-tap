@@ -5,20 +5,20 @@
 class Patent < Formula
   desc "Patent Connector CLI - patent/trademark tools, against a server or in-process"
   homepage "https://patent.dev"
-  version "1.16.0"
+  version "1.16.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://get.patent.dev/patent_1.16.0_darwin_amd64.tar.gz"
-      sha256 "0746e739dec383959210b378f9f009d75ac5416e38edf0dee912f09cd25eaf8f"
+      url "https://get.patent.dev/patent_1.16.1_darwin_amd64.tar.gz"
+      sha256 "85394e93967f4edd5d9d81002d20fc9aa9a859e82b0bce5ae0970a981400015e"
 
       define_method(:install) do
         bin.install "patent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://get.patent.dev/patent_1.16.0_darwin_arm64.tar.gz"
-      sha256 "962db15728be343590b122cdfaa2d5d4c6eed522d2e16504f13c3fbca51360b2"
+      url "https://get.patent.dev/patent_1.16.1_darwin_arm64.tar.gz"
+      sha256 "4d44cae2b00886d31f91c47d8daa244ed8e343b84474ba502728cac1eeb801a7"
 
       define_method(:install) do
         bin.install "patent"
@@ -28,15 +28,15 @@ class Patent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://get.patent.dev/patent_1.16.0_linux_amd64.tar.gz"
-      sha256 "e6c4a90b6cee8266b14148dec1c271e77fca3484049afe3e5faec299e3f6cd26"
+      url "https://get.patent.dev/patent_1.16.1_linux_amd64.tar.gz"
+      sha256 "8388baeb4cd312ec1fc7ca719b2b5af62db032cbc9dfc24ecd90aec872e5ec6d"
       define_method(:install) do
         bin.install "patent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.patent.dev/patent_1.16.0_linux_arm64.tar.gz"
-      sha256 "c2456ac676e83a84764e6aa3aaed834171b5e4e7c801022fabf0ecdbdb67c622"
+      url "https://get.patent.dev/patent_1.16.1_linux_arm64.tar.gz"
+      sha256 "798c34b0c2bf8756046d06464587739745019004e9e8d62a3c70afdc4a7277b0"
       define_method(:install) do
         bin.install "patent"
       end
